@@ -1,0 +1,27 @@
+#cloud-config
+package_update: true
+packages:
+  - nginx
+
+write_files:
+  - path: /var/www/html/index.html
+    owner: root:root
+    permissions: "0644"
+    content: |
+      <!doctype html>
+      <html lang="fr">
+        <head><meta charset="utf-8"><title>NimbusShop</title></head>
+        <body>
+          <h1>NimbusShop</h1>
+          <p>Serveur : __HOSTNAME__</p>
+        </body>
+      </html>
+  - path: /var/www/html/health
+    owner: root:root
+    permissions: "0644"
+    content: "healthy\n"
+
+runcmd:
+  - |
+    sed -i "s/__HOSTNAME__/$(hostname)/" /var/www/html/index.html
+    systemctl enable --now nginx

@@ -1,0 +1,5 @@
+owner               = "10"
+vm_size             = "Standard_B2ats_v2"
+ssh_public_key_path = "/Users/user/.ssh/id_rsa.pub"
+allowed_ssh_ip      = "37.64.127.18/32"
+alert_email         = "nansmoll646@gmail.com"
