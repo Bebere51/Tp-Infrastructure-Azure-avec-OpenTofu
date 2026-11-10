@@ -114,9 +114,3 @@ les fichiers `*.tfstate`, `*.tfvars`, les plans `*.tfplan`, ni des secrets.
 Pour publier le projet en ligne, ajouter le dépôt distant fourni par le binôme
 ou l'enseignant; aucune URL distante n'est configurée ici.
 
-## Validation finale
-
-Faire valider chaque niveau par l'enseignant, puis détruire les ressources avec
-`tofu destroy` après validation du dernier niveau. La consigne mentionne un
-schéma pour le chemin de santé, mais celui-ci n'était pas présent dans le texte
-extrait du document; `/health` est donc utilisé ici.
